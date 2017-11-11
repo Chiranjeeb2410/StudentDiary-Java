@@ -1,4 +1,4 @@
-public class DeleteAchievements extends AchievementsManip{
+public class DeleteAchievements extends AchievementsManip   {
   DeleteAchievements(String roll){
     super(roll);
   }
@@ -8,17 +8,17 @@ public class DeleteAchievements extends AchievementsManip{
       System.out.println(Functions.currentStudent.getName()+" has no Achievements !");
       return;
     }
-    for(Achievements obj:achieveList){
+    for(Accomplishmentsfh obj:achieveList){
       obj.print(achieveList.indexOf(obj));
     }
     System.out.print("Enter Sl. No. to delete: ");
-    int idx=Functions.getint();
+    int idx = Functions.getint();
     try{
       achieveList.remove(idx-1);
     }
     catch(Exception e){
       System.out.println("Invalid Index !");
     }
-    Achievements.put(achieveList,studDet.getRollno());
+    Accomplishmentsfh.put(achieveList,studDet.getRollno());
   }
 }

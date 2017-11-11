@@ -8,7 +8,7 @@ public class PrintAchievements extends AchievementsManip{
       System.out.println("No Entries for "+Functions.currentStudent.getName());
       return;
     }
-    for(Achievements obj:achieveList){
+    for(Accomplishmentsfh obj:achieveList){
       obj.print(achieveList.indexOf(obj));
     }
     System.out.println();

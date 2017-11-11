@@ -1,24 +1,25 @@
 import java.util.*;
 import java.io.*;
 
-public class AchievementsManip{
+public class AchievementsManip extends Accomplishmentsfh    {
 
   StudentDetails studDet;
-  Achievements achieve;
-  ArrayList<Achievements> achieveList;
+  Accomplishmentsfh achieve;
+
+  ArrayList<Accomplishmentsfh> achieveList;
 
   AchievementsManip(String roll){
-    studDet=new StudentDetails(roll);
-    achieve=new Achievements();
+    studDet = new StudentDetails(roll);
+    achieve = new Accomplishmentsfh();
   }
 
   public boolean getAchievements(){
     if(Functions.check("Achievements/"+studDet.getRollno())){
-      achieveList=Achievements.get(studDet.getRollno());
+      achieveList = Accomplishmentsfh.get(studDet.getRollno());
       return true;
     }
     else{
-      achieveList=new ArrayList<Achievements>();
+      achieveList = new ArrayList<Accomplishmentsfh>();
       return false;
     }
   }

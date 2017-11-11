@@ -1,29 +1,29 @@
 import java.util.*;
 
 public class AddCourse extends CourseManip{
-  Course newcourse;
+  Course newCourse;
 
   AddCourse(){
-    newcourse=new Course();
-    newcourse.setDetails();
-    courseList=new  ArrayList<Course>();
+    newCourse = new Course();
+    newCourse.setDetails();
+    courseList = new  ArrayList<Course>();
   }
 
   AddCourse(Course c){
-    newcourse=c;
+    newCourse=c;
   }
 
   public void Add(){
     if(check("Courses")==true){
-      courseList=Course.get();
+      courseList = Course.get();
       for(Course obj:courseList){
-        if(newcourse.equals(obj)){
+        if(newCourse.equals(obj)){
           System.out.println("Course Exists !");
           return;
         }
       }
     }
-    courseList.add(newcourse);
+    courseList.add(newCourse);
     Course.put(courseList);
   }
 }

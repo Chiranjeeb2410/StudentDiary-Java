@@ -8,6 +8,6 @@ public class AddAchievements extends AchievementsManip{
         return;
     getAchievements();
     achieveList.add(achieve);
-    Achievements.put(achieveList,studDet.getRollno());
+    Accomplishmentsfh.put(achieveList,studDet.getRollno());
   }
 }
